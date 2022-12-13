@@ -22,8 +22,8 @@ Ball_Colors = [RED, BLUE, YELLOW, GREEN, MAGENTA, CYAN]
 WIDTH = 800
 HEIGHT = 600
 
-tank = pygame.image.load('tank.png')
-tank.set_colorkey(WHITE)
+#tank = pygame.image.load('tank.png')
+#tank.set_colorkey(WHITE)
 
 
 class Ball:
@@ -178,7 +178,7 @@ class Target:
         self.exist = 1
         self.make_new_target(a)
 
-    def make_new_target(self, v, clr = RED):
+    def make_new_target(self, v, clr = YELLOW):
         """ New target initialization"""
         self.x = randint(20, 780)
         self.y = randint(50, 200)
@@ -212,7 +212,7 @@ class Target:
 class Bomb:
     def __init__(self, x_targ, y_targ):
         self.exist = 1
-        self.color = GREY
+        self.color = RED
         self.x = x_targ
         self.y = y_targ
         self.r = 7
